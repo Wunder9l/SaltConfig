@@ -1,0 +1,22 @@
+$TTL   600
+@               IN SOA  ns.example.com. hostmaster.example.com. (
+                2017053000
+                28800
+                7200
+                604800
+                600 )
+                IN NS   master.example.com.
+                IN NS   slave.example.com.
+                IN MX   10 mail.example.com.
+                IN A    1.1.1.1
+                IN TXT  "v=spf1 redirect=_spf.example.com"
+
+www IN A 1.1.1.1
+master IN A 192.168.1.1
+slave  IN A 192.168.1.250
+mail   IN A  192.168.1.5
+host1  IN A  192.168.1.2
+host2  IN A  192.168.1.3
+_spf   IN TXT  "v=spf1 mx:example.com ~all"
+dev-ns IN A 1.1.1.2
+dev IN NS dev-ns.example.com.

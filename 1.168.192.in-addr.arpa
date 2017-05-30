@@ -1,0 +1,14 @@
+$TTL   600
+@		      IN SOA  ns.example.com. hostmaster.example.com. (
+                2017053000
+                28800
+                7200
+                604800
+                600 )
+                IN NS   master.example.com.
+                IN NS   slave.example.com.
+
+1 IN PTR master.example.com.
+2 IN PTR host1.example.com.
+3 IN PTR host2.example.com.
+250 IN PTR slave.example.com.
